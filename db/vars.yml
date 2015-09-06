@@ -1,0 +1,8 @@
+# Define these variables in ../vars.yml
+#mysql_root_password: ''
+#mysql_app_user_password: ''
+
+mysql_users:
+  - name: app
+    pass: "{{ mysql_app_user_password }}"
+    host: '10.%'

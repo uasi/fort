@@ -1,0 +1,9 @@
+- hosts: all
+  vars_files:
+    - 'roles/ANXS.mysql/defaults/main.yml'
+    - '../vars.yml'
+    - 'vars.yml'
+  tasks:
+    - include: 'roles/ANXS.mysql/tasks/main.yml'
+  handlers:
+    - include: 'roles/ANXS.mysql/handlers/main.yml'
