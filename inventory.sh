@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Dynamic Inventory:
+# http://docs.ansible.com/ansible/intro_dynamic_inventory.html
+#
+# Developing Dynamic Inventory Sources:
+# http://docs.ansible.com/ansible/developing_inventory.html
+
 list() {
     cat <<EOD
 {
