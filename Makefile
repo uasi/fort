@@ -5,7 +5,7 @@ PROVISION := ansible-playbook site.yml -i inventory.sh
 all:
 
 app-provision:
-	$(PROVISION) -l app -e "db_ipv4_address=$(shell terraform output db_ipv4_address)"
+	$(PROVISION) -l app
 	@echo "To finish setup, open $(shell terraform output app_ipv4_address) in your browser and follow instructions."
 
 db-provision:

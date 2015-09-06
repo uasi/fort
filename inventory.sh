@@ -13,7 +13,8 @@ list() {
         "hosts": ["$(terraform output app_ipv4_address)"],
         "vars": {
             "ansible_ssh_user": "root",
-            "ansible_ssh_private_key_file": "$(terraform output ssh_private_key_file)"
+            "ansible_ssh_private_key_file": "$(terraform output ssh_private_key_file)",
+            "db_ipv4_address": "$(terraform output db_ipv4_address)"
         }
     },
     "db": {
