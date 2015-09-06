@@ -7,6 +7,6 @@ resource "digitalocean_droplet" "app" {
     ssh_keys = ["${var.digitalocean_ssh_key_fingerprint}"]
 
     lifecycle {
-        prevent_destroy = false
+        prevent_destroy = true
     }
 }
