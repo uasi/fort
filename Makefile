@@ -9,5 +9,9 @@ app-provision:
 db-provision:
 	ansible-playbook db.yml -i inventory.sh
 
+syntax-check:
+	ansible-playbook app.yml -i inventory.sh --syntax-check
+	ansible-playbook db.yml -i inventory.sh --syntax-check
+
 install-roles:
 	ansible-galaxy install -p roles -r requirements.yml $(FLAGS)
