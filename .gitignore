@@ -1,4 +1,4 @@
-/vars.yml
+/secret_vars.yml
 terraform.tfstate
 terraform.tfstate.backup
 terraform.tfvars

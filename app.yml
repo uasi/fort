@@ -1,3 +1,5 @@
 - hosts: app
   roles:
-  - common
+    - common
+  vars_files:
+    - secret_vars.yml
