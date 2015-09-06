@@ -1,17 +1,18 @@
+PROVISION := ansible-playbook site.yml -i inventory.sh
+
 .PHONY: all db-provision install-roles
 
 all:
 
 app-provision:
-	ansible-playbook app.yml -i inventory.sh
+	$(PROVISION) -l app
 	@echo "To finish setup, open $(shell terraform output app_ipv4_address) in your browser and follow instructions."
 
 db-provision:
-	ansible-playbook db.yml -i inventory.sh
+	$(PROVISION) -l db
 
 syntax-check:
-	ansible-playbook app.yml -i inventory.sh --syntax-check
-	ansible-playbook db.yml -i inventory.sh --syntax-check
+	$(PROVISION) --syntax-check
 
 install-roles:
 	ansible-galaxy install -p roles -r requirements.yml $(FLAGS)
