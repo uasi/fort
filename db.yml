@@ -1,6 +1,0 @@
-- hosts: db
-  roles:
-    - common
-    - ANXS.mysql
-  vars_files:
-    - secret_vars.yml

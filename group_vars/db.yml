@@ -1,8 +1,0 @@
-# Define these variables in ../secret_vars.yml
-#mysql_root_password: ''
-#mysql_app_user_password: ''
-
-mysql_users:
-  - name: app
-    pass: "{{ mysql_app_user_password | default('') }}"
-    host: '10.%'
